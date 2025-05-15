@@ -1,13 +1,14 @@
 import { Suspense } from 'react';
-import PostListServer from './components/PostListServer';
+import PostsPageTemplate from './components/templates/PostsPageTemplate';
+import PostsContainer from './components/organisms/PostsContainer';
+import LoadingContainer from './components/organisms/LoadingContainer';
 
 export default function Page() {
   return (
-    <main style={{ padding: '20px' }}>
-      <h1>Post List</h1>
-      <Suspense fallback={<p>Loading!!!...</p>}>
-        <PostListServer />
+    <PostsPageTemplate title="Post List">
+      <Suspense fallback={<LoadingContainer />}>
+        <PostsContainer />
       </Suspense>
-    </main>
+    </PostsPageTemplate>
   );
 }
