@@ -1,5 +1,5 @@
 {
-  "name": "expo-next-minimal-share",
+  "name": "next-expo-min-share",
   "private": true,
   "scripts": {
     "build": "turbo run build",
